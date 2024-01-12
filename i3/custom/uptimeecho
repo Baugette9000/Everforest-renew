@@ -1,0 +1,52 @@
+#!/bin/bash
+#
+#                      █▄▄ █▀█ █▀▀ ▄▀█ █▀▄ █▀▀ █▀▀ ▀█▀ █▀▀ █░█
+#                      █▄█ █▀▄ ██▄ █▀█ █▄▀ █▀░ ██▄ ░█░ █▄▄ █▀█
+#                       ------------------------------------
+# [ a small new years eve coding project because i have too much time on my hands ]
+
+
+# Variables (Colors!)
+
+Black='\033[0;30m'        # Black
+Red='\033[0;31m'          # Red
+Green='\033[0;32m'        # Green
+Yellow='\033[0;33m'       # Yellow
+Blue='\033[0;34m'         # Blue
+Purple='\033[0;35m'       # Purple
+Cyan='\033[0;36m'         # Cyan
+White='\033[0;37m'        # White
+
+# General Fetch Commands
+
+echo "                                             "
+echo "                                             "
+echo "      .             (\  (\      +            "
+echo "⠀        +        ( -  . - )         .       "
+echo "    +              /      \                  "
+echo "                  /  u  u  \                 "
+echo "  █▄▄ █▀█ █▀▀ ▄▀█ █▀▄ █▀▀ █▀▀ ▀█▀ █▀▀ █░█  "
+echo "  █▄█ █▀▄ ██▄ █▀█ █▄▀ █▀░ ██▄ ░█░ █▄▄ █▀█  "
+echo "⠀                                            "
+echo -e "${Yellow}user:" ${White}$(whoami)
+echo -e "${Green}kernel:" ${White}$(uname -r)
+echo -e "${Cyan}wm:    "  ${White}$XDG_CURRENT_DESKTOP
+echo -e "${Purple}resolution:" ${White}$(xrandr | grep ' connected' | cut -d'd' -f 2 | cut -d'n' -f 1 | cut -d'p' -f 1 | cut -d'(' -f 1 | cut -d '+' -f 1)
+echo -e "${Red}system up for" ${White}$(uptime -p)
+echo -e "${Black}------------------------------------" 
+echo -e "${Blue}packages: " ${White}$(ps -e | wc -l)
+echo -e "${Green}gpu usage:"${White}$(nvidia-smi --format=csv --query-gpu=memory.used,memory.total,utilization.gpu | cut -d "m" -f 6)
+echo -e "${Red}cpu usage:" ${White}$(cat /proc/stat |grep cpu |tail -1|awk '{print ($5*100)/($2+$3+$4+$5+$6+$7+$8+$9+$10)}'|awk '{print 100-$1"%"}')
+echo -e "${Yellow}ram usage:" ${White}$(free -h | awk '/^Mem:/ {print $3 "/" $2}')
+echo -e "${Cyan}gpu:     " ${White}$(nvidia-smi --query-gpu=gpu_name --format=csv | cut -d'm' -f 3)
+echo -e "${Blue}cpu:      ${White}$(grep -m 1 'model name' /proc/cpuinfo | cut -d':' -f 2)"
+echo "   "
+echo "   "
+
+# Notification Sender for Polybars
+notify-send "  The user is $(whoami) on kernel $(uname -r)." "This Session has been $(uptime -p)."
+notify-send "There are $(ps -e | wc -l) processes currently opened in this session." "⠀"
+notify-send "There are $(pacman -Q | wc -l) packages installed." "⠀"
+notify-send "Cpu Usage is currently at: $(cat /proc/stat |grep cpu |tail -1|awk '{print ($5*100)/($2+$3+$4+$5+$6+$7+$8+$9+$10)}'|awk '{print 100-$1"%"}')" "And Ram Usage is at: $(free -h | awk ' /^Mem:/ {print $3 "/" $2}')"
+
+

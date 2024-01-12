@@ -1,0 +1,136 @@
+#!/usr/bin/env bash
+
+DIR="/home/cleod/.config"
+
+# File
+time=`date +%Y-%m-%d-%H-%M-%S`
+geometry=`xrandr | grep 'current' | head -n1 | cut -d',' -f2 | tr -d '[:blank:],current'`
+dir="`xdg-user-dir PICTURES`/Screenshots"
+file="Screenshot_${time}_${geometry}.png"
+
+# Commands
+rofi_cmd="rofi -theme /usr/share/rofi/themes/squared-everforest.rasi"
+
+# Buttons
+wall0="Randomized"
+wall1="Path"
+wall2="Floyd"
+wall3="M1911"
+wall4="Streetlights"
+wall5="Fog"
+wall6="Flowers"
+wall7="Raindrops"
+wall8="CircledWave"
+wall9="Bash"
+wall10="Leaves"
+wall11="Space"
+wall12="Kanji"
+wall13="Tux"
+# take shots
+wall0 () {
+  feh --no-fehbg --bg-fill --randomize /usr/share/backgrounds/everforest/
+}
+wall1 () {
+   feh --bg-fill /usr/share/backgrounds/everforest/forest.jpg
+}
+
+wall2 () {
+   feh --bg-fill /usr/share/backgrounds/everforest/everforest3.png
+}
+
+wall3 () {
+   feh --bg-fill /usr/share/backgrounds/everforest/Colt.png
+}
+
+wall4 () {
+	 feh --bg-fill /usr/share/backgrounds/everforest/streetlights_2.png
+
+}
+
+wall5 () {
+	 feh --bg-fill /usr/share/backgrounds/everforest/green_forest_1.png
+}
+
+wall6 () {
+	 feh --bg-fill /usr/share/backgrounds/everforest/flowers.png
+}
+
+wall7 () {
+	 feh --bg-fill /usr/share/backgrounds/everforest/raindrops_2.png
+}
+
+wall8 () {
+	 feh --bg-fill /usr/share/backgrounds/everforest/everforest-4.png
+}
+
+wall9 () {
+   feh --bg-fill /usr/share/backgrounds/everforest/bash.png
+}
+
+wall10 () {
+  feh --bg-fill /usr/share/backgrounds/everforest/leaves3.jpg
+}
+
+wall11 () {
+  feh --bg-fill /usr/share/backgrounds/everforest/gruvbox_spac1.jpg
+}
+
+wall12 () {
+  feh --bg-fill /usr/share/backgrounds/everforest/Kanji.png
+}
+
+wall13 () {
+  feh --bg-fill /usr/share/backgrounds/everforest/Tux1.png
+}
+# Variable passed to rofi
+options="$wall0\n$wall1\n$wall2\n$wall3\n$wall4\n$wall5\n$wall6\n$wall7\n$wall8\n$wall9\n$wall10\n$wall11\n$wall12\n$wall13"
+
+
+chosen="$(echo -e "$options" | $rofi_cmd -p 'i3 Wallpapers' -mesg "A list of all the wallpapers for this rice." -dmenu -selected-row 0 -lines 10 -eh 1 -width 100 -padding 400 -opacity -bw 0 -fullscreen true "85")"
+# chosen="$(echo -e "$options" | $rofi_cmd -p 'Select Bookmarks' -dmenu -fullscreen -selected-row 0)"
+case $chosen in
+    $wall0)
+    wall0
+        ;;
+    $wall1)
+		wall1
+        ;;
+    $wall2)
+		wall2
+        ;;
+    $wall3)
+		wall3
+		    ;;
+    $wall4)
+		wall4
+        ;;
+    $wall5)
+    wall5
+        ;;
+    $wall6)
+    wall6
+        ;;
+    $wall7)
+    wall7
+        ;;
+    $wall8)
+    wall8
+        ;;
+    $wall9)
+    wall9
+        ;;
+    $wall10)
+    wall10
+        ;;
+    $wall11)
+    wall11
+        ;;
+    $wall12)
+    wall12
+        ;;
+    $wall13)
+    wall13
+        ;;
+esac
+
+@theme "/usr/share/rofi/themes/squared-everforest.rasi"

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+exec rofi -show p -modi p:~/.config/rofi/rofi-power-menu/rofi-power-menu

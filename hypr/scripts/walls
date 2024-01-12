@@ -1,0 +1,97 @@
+#!/usr/bin/env bash
+
+DIR="/home/cleod/.config"
+
+# File
+time=`date +%Y-%m-%d-%H-%M-%S`
+geometry=`xrandr | grep 'current' | head -n1 | cut -d',' -f2 | tr -d '[:blank:],current'`
+dir="`xdg-user-dir PICTURES`/Screenshots"
+file="Screenshot_${time}_${geometry}.png"
+
+# Commands
+rofi_cmd="rofi -theme /usr/share/rofi/themes/squared-everforest.rasi"
+
+# Buttons
+wall1="Path"
+wall2="Floyd"
+wall3="M1911"
+wall4="Streetlights"
+wall5="Fog"
+wall6="Flowers"
+wall7="Raindrops"
+wall8="CircledWave"
+wall9="Bash"
+# take shots
+wall1 () {
+    exec swww img /usr/share/backgrounds/everforest/forest.jpg
+}
+
+wall2 () {
+   exec swww img /usr/share/backgrounds/everforest/everforest3.png
+}
+
+wall3 () {
+   exec swww img /usr/share/backgrounds/everforest/Colt.png
+}
+
+wall4 () {
+	 exec swww img /usr/share/backgrounds/everforest/streetlights_2.png
+
+}
+
+wall5 () {
+	 exec swww img /usr/share/backgrounds/everforest/green_forest_1.png
+}
+
+wall6 () {
+	 exec swww img /usr/share/backgrounds/everforest/flowers.png
+}
+
+wall7 () {
+	 exec swww img /usr/share/backgrounds/everforest/raindrops_2.png
+}
+
+wall8 () {
+	 exec swww img /usr/share/backgrounds/everforest/everforest-4.png
+}
+
+wall9 () {
+   exec swww img /usr/share/backgrounds/everforest/bash.png
+}
+# Variable passed to rofi
+options="$wall1\n$wall2\n$wall3\n$wall4\n$wall5\n$wall6\n$wall7\n$wall8\n$wall9"
+
+
+chosen="$(echo -e "$options" | $rofi_cmd -p 'Hyprland Wallpapers' -dmenu -selected-row 0 -lines 5 -eh 1 -width 100 -padding 400 -opacity -bw 0 -fullscreen true "85")"
+# chosen="$(echo -e "$options" | $rofi_cmd -p 'Select Bookmarks' -dmenu -fullscreen -selected-row 0)"
+case $chosen in
+    $wall1)
+		wall1
+        ;;
+    $wall2)
+		wall2
+        ;;
+    $wall3)
+		wall3
+		;;
+    $wall4)
+		wall4
+        ;;
+    $wall5)
+    wall5
+        ;;
+    $wall6)
+    wall6
+        ;;
+    $wall7)
+    wall7
+        ;;
+    $wall8)
+    wall8
+        ;;
+    $wall9)
+    wall9
+        ;;
+esac
+
+@theme "/usr/share/rofi/themes/squared-everforest.rasi"
