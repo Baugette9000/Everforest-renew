@@ -1,0 +1,60 @@
+@import url(https://seele1306.github.io/Modular/main.css);
+
+/* --- CUSTOMIZABLE --- */
+:root, .theme-dark, .theme-light {
+	/* Change to none to use solid color theme, or use one of the premade Nitro gradients, or make your own gradient or even add a background (must be an URL) */
+	--modular-background: none !important;
+	/* Available gradients: aurora, forest, hanami, lofi, mint-apple, mars, neon-nights, retro-raincloud, strawberry-lemonade, sepia,
+  	* midnight-blurple, chroma-glow, citrus-sherbert, cotton-candy, crimson-moon, desert-khaki, dusk, retro-storm, sunrise, sunset, under-the-sea */
+	/* Overall accent */
+	--modular-hue: 338;
+	--modular-saturation: calc(var(--saturation-factor, 1)* 19%);
+	--modular-luminosity: 20%;
+	/* Shadow */
+	--modular-shadow-distance: 8px; /* Default is 8px */
+	--modular-stroke-distance: 1px; /* Default is 1px */
+	/* Border radius */
+	--modular-border-radius: 8px; /* Default is 8px */
+	--modular-client-spacing: 12px; /* Default is 12px */
+	--modular-client-radius: 4px; /* Default is 4px */
+	/* Font change */
+	--font-main: "Darumadrop One";
+	/* Chat bubbles */
+	--test-color: hsl(234, 71%, 61%);
+	--chat-bubble-default: 223deg 7% 57%;
+	--chat-bubble-replying: 162deg 71% 61%;
+	--chat-bubble-mentioned: 39deg 81% 54%;
+	--chat-bubble-automod: 9deg 100% 50%;
+	--modular-accent-color: #f9abc8;
+	--quote-text-color: 105deg 48% 72%;
+	/* Status colors */
+	/* Only solid colors, no transparency! */
+	--online-status-color: hsl(105, 48%, 72%);
+	--idle-status-color: hsl(40, 70%, 78%);
+	--dnd-status-color: hsl(351, 74%, 73%);
+	/* Important people colors */
+	/* Only solid (preferably bright) colors, no transparency! */
+	--owner-tag-color: rgb(238, 174, 185);
+	--admin-tag-color: rgb(106, 228, 171);
+	--staff-tag-color: rgb(190, 190, 236);
+	--mod-tag-color: rgb(231, 183, 93);
+	/* User panel section border */
+	--section-thickness: 2px; /* Default is 2px; 0px for no border */
+	/* Quotes */
+	--quote-vertical-spacing: 4px;
+	--quote-horizontal-spacing: 10px;
+	--quote-border-radius: 6px;
+	/* Guilds list */
+	--guild-item-radius: 4px; /* Default is 4px */
+	--guild-item-spacing: 4px; /* Default is 4px */
+	/* Menu UI */
+	--modular-background-blur-strength: 10px; /* in px, Default is 10px */
+	--modular-background-brightness: 100%; /* Between 0 and 100% - Default is 100% */
+	--modular-transparency: 25%; /* Between 0 and 50% - Default is 25% */
+	--sidebar-orientation: column; /* column-reverse for user panel on top */
+	--guild-orientation: row; /* row-reverse for guild bar on the right */
+	--client-orientation: row; /* row-reverse for server list and user panel on the right */
+	--memberlist-orientation: row; /* row-reverse for member list on the left */
+	--friendlist-orientation: row; /* row-reverse for now playing tab on the left */
+	--titlebar-name: "";
+}

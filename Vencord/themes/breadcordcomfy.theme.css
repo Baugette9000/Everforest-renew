@@ -1,0 +1,100 @@
+/**
+ * @name Breadcord Comfy
+ * @author Nyria#3863
+ * @version 2.2
+ * @description Stay comfy while talking to your friends.
+ * @invite rtBQX5D3bD
+ * @source https://github.com/NYRI4/Comfy
+ * @BDEditor Comfy
+*/
+
+@import url('https://comfy-themes.github.io/Discord/betterdiscord/main.css');
+@import url('https://nyri4.github.io/Discolored/main.css');
+@import url('https://comfy-themes.github.io/Discord/betterdiscord/no-scrollbar.css');
+@import url('https://comfy-themes.github.io/Discord/betterdiscord/better-spotify.css');
+@import url("https://rejdesu.github.io/discordCSS/ProfileBannerSkins/profileBannerSkinsUpdated.css");
+@import url('https://fonts.cdnfonts.com/css/darumadrop-one');
+
+:root {
+  --mention-color-bar: #FFD0D0;
+  --mention-color-background: rgba(198, 98, 98, 0.12);
+  --mention-color-hover: rgba(198, 98, 98, 0.15);
+  --mention-color: #FF9B9B;
+  --unread-color: #FFFFFF;
+  --chat-buttons: #FFE3E3;
+  --avatar-radius: 25px;
+  --status-radius: 10px;
+  --server-radius: 25px;
+  --status-background: url('https://i.imgur.com/ODa8LKK.jpg');
+  --online: #43B581;
+  --iddle: #FAA61A;
+  --dnd: #F04747;
+  --offline: #747F8D;
+  --streaming: #593695;
+  --spotify-color: #1EDC62;
+  --user-buttons-spacing: 8px;
+  --user-buttons-color: #FFCCCC;
+  --role-circle: 12px;
+  --discord-logo: none;
+  --colored-emoji: grayscale(0%);
+  --disable-animations: 2s channel-unread infinite;
+}
+
+.theme-dark {
+  --background-primary: #2E2025;
+  --background-secondary: #3C292E;
+  --background-secondary-alt: #160F11;
+  --background-tertiary: #160F11;
+  --background-mobile-primary: #3C292E;
+  --background-mobile-secondary: #5F414C;
+  --channeltextarea-background: #5F414C;
+  --background-accent: #997280;
+  --background-modifier-hover: rgba(0, 0, 0, 0.06);
+  --background-modifier-active: rgba(0, 0, 0, 0.10);
+  --background-modifier-selected: rgba(0, 0, 0, 0.12);
+  --deprecated-card-bg: rgba(18, 20, 31, 0.39);
+  --background-floating: rgb(44,30,35,1);
+  --deprecated-quickswitcher-input-background: #101320;
+  --scrollbar-auto-thumb: #121722;
+  --scrollbar-auto-track: #191F2E;
+  --scrollbar-thin-thumb: #141925;
+  --activity-card-background: #2C1E23;
+  --background-message-hover: transparent;
+  --elevation-low: none;
+}
+
+.theme-light {
+  --background-primary: #23283D;
+  --background-secondary: #1E2233;
+  --background-secondary-alt: #191F2E;
+  --background-tertiary: #101320;
+  --background-accent: #7289DA;
+  --background-modifier-hover: #262B41;
+  --background-modifier-active: #262B41;
+  --header-primary: #fff;
+  --header-secondary: #B1B5B9;
+  --text-normal: #8E9297;
+}
+
+/* Font change */
+{
+
+--font-main: "Darumadrop One";
+--font-code: Consolas, monospace, Cona;
+} 
+
+/* transparent user popout (works great with colors) */
+[class^=userPopoutOverlayBackground] {
+    background: transparent;
+}
+
+[class*=accountProfilePopoutWrapper-] > div > div > [class*=userPopoutOverlayBackground-] > [class*=divider-],
+[class*=accountProfilePopoutWrapper-] > div > div > [class*=userPopoutOverlayBackground-] > [class*=section-],
+[class*=accountProfilePopoutWrapper-] > div > div > [class*=userPopoutOverlayBackground-] > [class*=scroller-] {
+    display: none;
+}
+
+
+    /* Any custom CSS below here */
+
+

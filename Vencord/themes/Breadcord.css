@@ -1,0 +1,774 @@
+@import url(https://minidiscordthemes.github.io/Snippets/HideAKA/HideAKA-badge.css);
+@import url('https://fonts.cdnfonts.com/css/darumadrop-one');
+@import url("https://rejdesu.github.io/discordCSS/ProfileBannerSkins/profileBannerSkinsUpdated.css");
+@import url(https://minidiscordthemes.github.io/Snippets/HideAKA/HideAKA-blur.css);
+@import url(https://blade04208.github.io/css/SignIt/settings.css); /* bottom of settings */
+@import url(https://blade04208.github.io/css/SignIt/titlebar.css); /* in titlebar WINDOWS DESKTOP ONLY */ 
+@import url(//dablulite.github.io/css-snippets/AccountDetailsGrid/import.css);
+@import url(https://seele1306.github.io/OnekoDM.css);
+@import url(//raw.githubusercontent.com/lumap/css-snippets/main/double-row-badges-fix.css);
+/* Long bios for users */
+[class*=userPopoutOverlayBackground-] [class*=lineClamp2Plus-],
+[class*=userProfileModalOverlayBackground-] [class*=lineClamp2Plus-]{
+  -webkit-line-clamp: 190 !important;
+}
+
+:root {
+  --font-display: "Darumadrop One", "Darumadrop One", cursive;
+  --font-headline: "Darumadrop One", "Darumadrop One", cursive;
+}
+/* Visible VC Text Button */
+#app-mount .openChatIconItem-2kj5qO {
+    display: flex;
+    order: 1;
+    justify-content: center;
+    border-radius: 4px;
+    width: 42px;
+    padding-right: 0;
+}
+
+.openChatIconItem-2kj5qO:hover { background-color: var(--background-modifier-selected); }
+.openChatIconItem-2kj5qO .actionIcon-2sw4Sl { color: var(--channels-default); }
+
+/* Pop-out Animation */ 
+.menu-1QACrS, .emojiPicker-6YCk8a, .browser-mnQ1T7, .messagesPopoutWrap-3zryHW, .wrapper-1NB3WY, .container-3u7RcY, .container-2o3qEW, .container-2ebMPP, .userPopout-2j1gM4 {
+    animation: custom-menu-animation 250ms ease;
+    transform-origin: top;
+}
+
+/* Better Jump To Present Button */
+[class*="jumpToPresentBar"] {
+    display: contents;
+}
+[class*="jumpToPresentBar"] > button:first-child {
+    display: none;
+}
+[class*="jumpToPresentBar"] > button:last-child {
+    position: absolute;
+    z-index: 1;
+    bottom: 24px;
+    right: 22px;
+    padding: 8px !important;
+    height: auto;
+    background-color: #5865F2;
+    box-shadow: var(--elevation-high);
+    border-radius: 100px;
+    display: flex;
+    font-size: 0px;
+    color: transparent;
+    transition: font-size .2s .1s, color .2s, padding .4s .1s;
+}
+[class*="jumpToPresentBar"] > button svg {
+    order: -1;
+    margin: 0px;
+    height: 24px;
+    width: 24px;
+    top: auto;
+    margin-right: 0px;
+    margin-left: 0px;
+    color: #FFFFFF;
+    transition: margin .6s;
+}
+[class*="jumpToPresentBar"]:hover > button {
+    padding: 8px 18px !important;
+    font-size: 14px;
+    color: #FFFFFF;
+    transition: font-size .2s, color .2s .1s, padding .4s;
+}
+[class*="jumpToPresentBar"]:hover > button svg {
+    margin-right: 2px;
+    margin-left: -6px;
+}
+
+/* Re-round Spotify Status Images */
+.assetsLargeImageSpotify-17ME3M{border-radius:8px;}
+
+/* Centered user profile */
+.usernameSection-3FppkT,
+.container-3g15px,
+.textarea-_59yqs,
+.inputDefault-Ciwd-S,
+.userInfoSectionHeader-2mYYun,
+.text-sm-normal-AEQz4v,
+.content-tXPNDw,
+.section-28YDOf {
+    text-align: center;
+}
+
+.listName-PwbeHL {
+    text-align: right;
+}
+
+.customStatus-19KW6v,
+.eyebrow-1Shfyi {
+    display: flex;
+}
+
+.eyebrow-1Shfyi,
+.memberSinceContainer-2CBD23,
+.section-28YDOf > div,
+.nameTag-35jqbZ,
+.customStatus-19KW6v,
+.tabBar-2hXqzU,
+.headerContainer-1wJjOa {
+    justify-content: center;
+}
+
+.guildNick-fe8oPN {
+    justify-content: right;
+}
+
+.cozy-VmLDNB .headerText-2z4IhQ > .username-h_Y3Us::before {
+  content: ''; 
+  width: calc(100% + 10px); 
+  height: 100%;
+  border-radius: 5px;
+  background-color: currentColor; 
+  opacity: 0.2; 
+  position: absolute; 
+  top: 0; 
+  z-index: -1;
+  left: -5px;
+}
+.cozy-VmLDNB .headerText-2z4IhQ > .username-h_Y3Us {
+  margin-left: 5px;
+}
+
+
+.favoriteIcon-2kWmTP > path {
+    d: path("M16.44 3.10156C14.63 3.10156 13.01 3.98156 12 5.33156C10.99 3.98156 9.37 3.10156 7.56 3.10156C4.49 3.10156 2 5.60156 2 8.69156C2 9.88156 2.19 10.9816 2.52 12.0016C4.1 17.0016 8.97 19.9916 11.38 20.8116C11.72 20.9316 12.28 20.9316 12.62 20.8116C15.03 19.9916 19.9 17.0016 21.48 12.0016C21.81 10.9816 22 9.88156 22 8.69156C22 5.60156 19.51 3.10156 16.44 3.10156Z");
+    transform: scale(1.1) translate(-1.5px, -1px);
+    transition: all 0.2s ease-in-out;
+}
+.wrapper-3kah-n.selected-1Drb7Z[aria-label*="Fav"] .favoriteIcon-2kWmTP path {
+    fill: #ffd5d6;
+}
+.wrapper-3kah-n.selected-1Drb7Z[aria-label*="Fav"] .childWrapper-1j_1ub {
+    background: var(--background-primary) !important;
+}
+.wrapper-3kah-n.selected-1Drb7Z[aria-label*="Fav"] .childWrapper-1j_1ub::after {
+    background-color: #ff999b;
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    filter: blur(10px);
+    opacity: 0.4;
+}
+
+/* Vencord toolbox Logo */
+.vc-toolbox-btn svg path {
+  display: none;
+}
+
+.vc-toolbox-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://cdn.discordapp.com/attachments/1025149631253991475/1117030250786848878/T00gKRsY.gif");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+:is(.vc-toolbox-btn:hover, .vc-toolbox-btn[class*="selected"]) svg path {
+  display: none;
+}
+
+:is(.vc-toolbox-btn:hover, .vc-toolbox-btn[class*="selected"])::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://cdn.discordapp.com/attachments/1025149631253991475/1117030391694508093/dPXyPZUT.webp");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.container-YkUktl {
+    background-image: linear-gradient( var(--background-primary) ,var(--background-primary), var(--background-secondary)) !important;
+}
+
+.container-1zzFcN {
+  background-color: var(--background-primary) !important;
+  padding-bottom: 10px !important;
+  padding: 0.875rem !important;
+}
+.buttonColor-3bP3fX {
+background-color: var(--background-secondary-alt) !important;
+}
+
+.containerDefault-3TQ5YN .overflow-1wOqNV {
+  color: #3e4349 !important;
+  background-color: #ffd5d6 !important;
+  border-radius: 6px;
+  padding: 3px;
+  margin-bottom: 10px;
+  margin-left: 6px;
+  font-size: 14px;
+  font-family: 'Darumadrop One', sans-serif;
+  /*font-weight: bold; Use if your font is too light*/
+  text-align: center;
+}
+.arrow-2HswgU {
+  top: 0px;
+  zoom: 100% ;
+}
+
+.container-YkUktl {
+  height: auto !important;
+  padding: 17px 20px;
+  flex-direction: column;
+  align-items: stretch;
+  row-gap: 3px;
+}
+
+.container-YkUktl > div {
+  width: 102%;
+}
+
+.container-YkUktl > div:nth-child(2) {
+  justify-content: space-between;
+  max-height: 0;
+  overflow: hidden;
+  transition-property: max-height;
+  transition-duration: .11s;
+  transition-timing-function: ease-in-out;
+}
+
+.container-YkUktl:hover > div:nth-child(2) {
+  max-height: 32px;
+}
+
+.container-YkUktl > div:nth-child(2) > button {
+  width: 15%;
+}
+
+:root {
+    --font-family: 'Darumadrop One', sans-serif;
+    --font-primary: 'Darumadrop One', sans-serif;
+
+/* transparent user popout (works great with colors) */
+[class^=userPopoutOverlayBackground] {
+  background: transparent;
+}	}
+
+#message-actions-pin, #message-pin, #message-unpin{
+    color: skyblue;
+}
+#message-actions-pin:hover, #message-pin:hover, #message-unpin:hover {
+    background-color: #67a7c0;
+    color: #fff;
+}
+#message-actions-reply, #message-reply {
+    color: khaki;
+}
+#message-actions-reply:hover, #message-reply:hover {
+    background-color: #c5bb5d;
+    color: #fff;
+}
+#message-actions-thread, #message-thread {
+    color: #69c069;
+}
+#message-actions-thread:hover, #message-thread:hover {
+    background-color: #5dbd5d;
+    color: #fff;
+}
+#message-actions-mark-unread, #message-mark-unread {
+    color: plum;
+}
+#message-actions-mark-unread:hover, #message-mark-unread:hover {
+    background-color: #c27ec2;
+    color: #fff;
+}
+#message-actions-copy-link, #message-copy-link {
+    color: lightseagreen;
+}
+#message-actions-copy-link:hover, #message-copy-link:hover {
+    background-color: #199c96;
+    color: #fff;
+}
+#message-actions-tts, #message-tts{
+    color: var(--brand-experiment);
+}
+#message-actions-tts:hover, #message-tts:hover{
+    background-color: var(--brand-experiment);
+    color: #fff;
+}
+#message-actions-copy-id, #message-devmode-copy-id {
+    color: lightsalmon;
+}
+#message-actions-copy-id:hover #message-devmode-copy-id:hover{
+    background-color: lightsalmon;
+    color: #fff;
+}
+#message-edit, #message-actions-edit{
+    color: steelblue;
+}
+#message-edit:hover,  #message-actions-edit:hover{
+    background-color: steelblue;
+    color: #fff;
+}
+#message-add-reaction{
+    color: goldenrod;
+}
+#message-add-reaction:hover{
+    background-color: goldenrod;
+    color: #fff;
+}
+
+.button-12Fmur .contents-3NembX {
+    transform: rotate(0deg);
+    transition: transform 0.3s;
+}
+.button-12Fmur:hover .contents-3NembX {
+    transform: rotate(30deg);
+}
+.button-12Fmur:hover .contents-3NembX svg {
+    height: 28px !important;
+    width: 28px !important;
+}
+.button-12Fmur .contents-3NembX svg {
+    transition: width 0.3s, height 0.3s;
+}
+
+/* Make pronouns stand out more */
+[class*=pronouns] {
+  color: var(--text-normal);
+  font-size: 12px; font-weight: 800;
+  background: #ffffff20;
+  padding: 0.10rem 0.5rem; margin: 0.25rem 0 0 0;
+  border-radius: 1rem;
+}
+
+[class*=accountProfilePopoutWrapper-] > div > div > [class*=userPopoutOverlayBackground-] > div:nth-child(1),
+[class*=accountProfilePopoutWrapper-] > div > div > [class*=userPopoutOverlayBackground-] > div:nth-child(2),
+[class*=accountProfilePopoutWrapper-] > div > div > [class*=userPopoutOverlayBackground-] > div:nth-child(3),
+[class*=divider-], [class*=separator-]
+{
+  display: none;
+}
+
+:is([class*=userTagWithNickname], [class*=nameTagSmall]) span:only-child:before {
+    content: '@';
+}
+
+/* transparent user popout (works great with colors) */
+[class^=userPopoutOverlayBackground] {
+  background: transparent;
+}
+
+.wordmarkWindows-2dq6rw svg {
+    display: none;
+}
+.wordmarkWindows-2dq6rw::after {
+    content: 'Breadcord';
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 16px;
+    line-height: 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--muted-text);
+}
+
+svg[class^="homeIcon"] path {
+    d: path('M 2 0 a 2 2 90 0 0 -2 2 v 12 a 2 2 90 0 0 2 2 h 2 l 0 4 l 4 -4 H 18 a 2 2 90 0 0 2 -2 V 2 a 2 2 90 0 0 -2 -2 z');
+}
+svg[class^="homeIcon"] {
+    margin-left: 8px;
+}
+
+[class^=menu-],[class^=submenu-] {
+  background: none;
+}
+[class^=submenu-] {
+  margin: 0 -8px;
+}
+.theme-dark [class^=menu-]::after,.theme-dark [class^=submenu-]::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: 5px;
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.4);
+}
+.theme-light [class^=menu-]::after,.theme-light [class^=submenu-]::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: 5px;
+  background: rgba(245, 245, 245, 0.7);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.4);
+}
+[class^=backdrop-] ~ .theme-light[class*=layer-]>[class^=menu-] {
+  background: rgba(245, 245, 245, 0.7);
+}
+[class^=backdrop-] ~ .theme-dark[class*=layer-]>[class^=menu-] {
+  background: rgba(10, 10, 10, 0.7);
+}
+[class^=backdrop-] ~ [class*=layer-]>[class^=menu-]::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.4);
+}
+.section-3FmfOT, .divider-1tWBgZ, .scroller-1jBQYo {
+  z-index: 2;
+}
+
+.buttonContainer-1sjtPU{
+  display: none;
+}
+
+/* oneko above msg bar */
+[class^="channelTextArea"]::before {
+    content: "";
+    width: 32px;
+    height: 32px;
+    bottom: calc(100% - 3px); /* Mess with the - 3px to change its vertical position */
+    right: 10px; /* Switch this from right to left to put it on the left side, or increase/decrease to change its position */
+    position: absolute;
+    image-rendering: pixelated;
+    background-image: url("https://raw.githubusercontent.com/adryd325/oneko.js/14bab15a755d0e35cd4ae19c931d96d306f99f42/oneko.gif");
+  /*animation: sleep 1s infinite;*/
+    animation: sleep, init; 
+    animation-duration: 1s, 2s;
+    animation-iteration-count: infinite, 1;
+    animation-delay: 2s, 0s;
+}
+[class^="channelTextArea"]::after {
+  animation: reverse wakeup 1s 1;
+}
+[class^="channelTextArea"]:hover::before {
+    
+    animation: 2s 1 forwards wakeup;
+}
+@keyframes sleep {
+/* i had to remove the instruction comment bc message limit :sobbing: */
+    0%, 50% {
+        background-position: -64px 0;
+    }
+    50.00001%, 100% {
+        background-position: -64px -32px;
+    }
+}
+@keyframes wakeup {
+    0%, 20% {
+        background-position: -160px 0;
+    }
+    20.00001%, 40% {
+        background-position: -192px 0;
+    }
+    40.00001%, 60% {
+        background-position: -224px 0;
+    }
+    60.00001%, 80% {
+        background-position: -96px -64px;
+    }
+    80.00001%, 100% {
+        background-position: -96px -96px;
+    }
+}
+
+@keyframes init {
+    
+    0%, 14.28% {
+        background-position: -96px -96px;
+    }
+    14.280001%, 28.56% {
+        background-position: -96px -64px;
+    }
+    28.560001%, 42.84% {
+        background-position: -224px 0;
+    }
+    42.840001%, 57.12% {
+        background-position: -192px 0;
+    }
+    57.120001%, 71.40% {
+        background-position: -160px 0;
+    }
+    71.400001%, 85.68% {
+        background-position: -64px 0;
+    }
+    85.680001%, 99.999999% {
+        background-position: -64px -32px;
+    }
+}
+
+/*Disabling Library & Nitro & Birthday Buttons on DM*/
+.privateChannels-oVe7HL [href="/store"],[href="/library"],[href="/activities"] {
+display: none;
+}
+
+/*titlebar background*/
+.bg-1QIAus {
+  background-image: url("https://i.imgur.com/3jQ5Ufn.gif"); /* source: https://vimeo.com/309240312 */
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* edited from some css from a few months ago idk */
+/* L light theme users ig /*
+/* rainbow mentions */
+.theme-dark .mentioned-Tre-dv .mention,
+.theme-dark .wrapper-1ZcZW- {
+  transition-duration: 250ms;
+  background: #0000002A !important;
+}
+.theme-dark .mentioned-Tre-dv .mention,
+.theme-dark .wrapper-1ZcZW-:hover{
+  transition-duration: 250ms;
+  background: #00000014 !important;
+}
+.theme-dark .mentioned-Tre-dv .mention,
+.theme-dark .mention,
+.theme-dark [class*="messageListItem"] .username-u-ebrn , 
+.theme-dark [class*="repliedMessage"] .desaturateUserColors-1O-G89{ /* :3 */
+  color: #f3789d;
+  animation: rainbowmention 3s infinite linear;
+  font-weight: bold;
+}
+.theme-dark [class*="messageListItem"] .content-vSHmMD{
+    color: var(--text-normal);
+}
+@keyframes rainbowmention {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(360deg);
+  }
+}
+
+.voiceUser-3nRK-K {
+	animation: voiceUser 0.5s ease-in-out;
+}
+
+@keyframes voiceUser {
+	from {
+		transform: translateX(20px);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+/* Comfy-Style Spotify Player
+ * Kanged and modified code from https://github.com/Comfy-Themes/Discord
+ */
+#vc-spotify-player {
+  --spotify-wave-width: 240px;
+  --spotify-vencord-color: #c68a9f;
+  --spotify-vencord-text: var(--background-primary);
+}
+@keyframes spotifywave {
+  0% {
+    -webkit-mask-position-x: var(--spotify-wave-width);
+  }
+
+  100% {
+    -webkit-mask-position-x: 0;
+  }
+}
+#vc-spotify-player::before {
+  content: "";
+  position: absolute;
+  height: 25px;
+  z-index: 1;
+  width: var(--spotify-wave-width);
+  margin-top: -29px;
+  left: 0;
+  background: var(--spotify-vencord-color);
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="240" height="25" viewBox="0 0 284 25"><path d="M283.999 15.2776C228.798 15.2776 211.243 -0.0317305 140.048 -0.000164877C69.0475 -0.000164877 51.2975 15.2776 8.58307e-06 15.2776V24.9998H284C284 24.9998 283.999 18.9392 283.999 15.2776Z"/></svg>');
+  animation: spotifywave 8s linear infinite;
+  animation-delay: 0s;
+  opacity: 1;
+}
+#vc-spotify-player#vc-spotify-player  {
+  background: linear-gradient(var(--spotify-vencord-color) 20%, var(--bg-overlay-1, var(--background-secondary-alt)));
+  border-bottom: none;
+}
+#vc-spotify-song-title#vc-spotify-song-title,
+.vc-spotify-ellipoverflow.vc-spotify-ellipoverflow,
+.vc-spotify-artist.vc-spotify-artist,
+.vc-spotify-album.vc-spotify-album
+/* , .vc-spotify-time-right, .vc-spotify-time-left */  {
+  color: var(--spotify-vencord-text);
+}
+#vc-spotify-player [class*="bar-"] {
+  background: hsl(var(--primary-700-hsl)/0.3);
+}
+#vc-spotify-player [class*="barFill"] {
+  background: var(--spotify-vencord-color);
+}
+[class*=wrapper-]:not(:empty) + #vc-spotify-player {
+  margin-top: 27px;
+}
+[class*=panels-] [class*=wrapper-] [class*=container-] {
+  border-bottom: none;
+}
+
+/* The code below isn't really needed but it looks pretty :3 */
+.vc-spotify-shuffle-on.vc-spotify-shuffle-on,
+.vc-spotify-repeat-context.vc-spotify-repeat-context,
+.vc-spotify-repeat-track.vc-spotify-repeat-track,
+.vc-spotify-shuffle-on.vc-spotify-shuffle-on:hover,
+.vc-spotify-repeat-context.vc-spotify-repeat-context:hover,
+.vc-spotify-repeat-track.vc-spotify-repeat-track:hover {
+  color: var(--spotify-vencord-color);
+}
+.vc-spotify-button.vc-spotify-button {
+  transition: background 0.3s;
+}
+.vc-spotify-button.vc-spotify-button:hover {
+  background: hsl(var(--primary-700-hsl)/0.3);
+}
+
+:root{
+/* Floating client */
+  --spacing: 8px; /*put whatever you want in these, imo 8px works best tho */
+  --radius: 12px;
+
+  /* Gradient from Frosted Glass */
+  --gradient-1: 63, 44, 51; 
+  --gradient-2: 49, 34, 40;
+  --gradient-3: 114, 81, 93;
+  --gradient-4: 38, 27, 31;
+  --gradient-direction: 45deg; 
+}
+/* Cozy spacing around everything in the app (basically turns everything into a floating window type thing over a background you can then figure out how to style, or you can see it as adding a border around the whole app, idunno. Anyway snippet by DeadVoxels */
+.bg-1QIAus, .app-2CXKsg, .appMount-2yBXZl {
+    background: none;
+}
+      /* Floating Background */
+.bg-1QIAus {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+body,.bg-1QIAus{
+  background: linear-gradient(var(--gradient-direction), rgb(var(--gradient-1)), rgb(var(--gradient-1)), rgb(var(--gradient-4)), rgb(var(--gradient-4)));
+  background-size: 800% 800%;
+  animation: Gradient 15s ease infinite;
+  height: 100vh;
+}
+  @keyframes Gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.base-2jDfDU {
+    margin: var(--spacing);
+    border-top-right-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+}
+.container-1eFtFS {
+    margin: var(--spacing);
+    width: calc(100vw - calc(var(--spacing) * 2));
+    background: var(--background-tertiary-alt);
+    border-radius: calc(var(--radius) * 2);
+}
+.guilds-2JjMmN {
+    margin-top: var(--spacing);
+    margin-bottom: var(--spacing);
+    margin-left: var(--spacing);
+    margin-right: calc(var(--spacing)*-2);
+    background: var(--background-primary);
+    border-top-left-radius: var(--radius);
+    border-bottom-left-radius: var(--radius);
+}
+
+/*home icon hover effect*/
+.homeIcon-r0w4ny > path {
+  d: path(
+    "M23.0212 1.67671C21.3107 0.879656 19.5079 0.318797 17.6584 0C17.4062 0.461742 17.1749 0.934541 16.9708 1.4184C15.003 1.12145 12.9974 1.12145 11.0283 1.4184C10.819 0.934541 10.589 0.461744 10.3368 0.00546311C8.48074 0.324393 6.67795 0.885118 4.96746 1.68231C1.56727 6.77853 0.649666 11.7538 1.11108 16.652C3.10102 18.1418 5.3262 19.2743 7.69177 20C8.22338 19.2743 8.69519 18.4993 9.09812 17.691C8.32996 17.3997 7.58522 17.0424 6.87684 16.6135C7.06531 16.4762 7.24726 16.3387 7.42403 16.1847C11.5911 18.1749 16.408 18.1749 20.5763 16.1847C20.7531 16.3332 20.9351 16.4762 21.1171 16.6135C20.41 17.0369 19.6639 17.3997 18.897 17.691C19.3052 18.4993 19.7718 19.2689 20.3021 19.9945C22.6677 19.2689 24.8929 18.1364 26.8828 16.6466H26.8893C27.43 10.9731 25.9665 6.04728 23.0212 1.67671ZM9.68041 13.6383C8.39754 13.6383 7.34085 12.4453 7.34085 10.994C7.34085 9.54272 8.37155 8.34973 9.68041 8.34973C10.9893 8.34973 12.0395 9.54272 12.0187 10.994C12.0187 12.4453 10.9828 13.6383 9.68041 13.6383ZM18.3161 13.6383C17.0332 13.6383 15.9765 12.4453 15.9765 10.994C15.9765 9.54272 17.0124 8.34973 18.3161 8.34973C19.6184 8.34973 20.6751 9.54272 20.6543 10.994C20.6543 12.4453 19.6184 13.6383 18.3161 13.6383Z"
+  );
+  transform: scale(1.1) translate(-1.5px, -1px);
+  transition: all 0.2s ease-in-out;
+}
+
+.wrapper-3kah-n.selected-1Drb7Z:has([d^="M23.0212"]) .homeIcon-r0w4ny path {
+  fill: #ffdcdc;
+}
+
+.wrapper-3kah-n.selected-1Drb7Z:has([d^="M23.0212"]) .childWrapper-1j_1ub {
+  background: var(--background-primary) !important;
+}
+
+.wrapper-3kah-n.selected-1Drb7Z:has([d^="M23.0212"])
+  .childWrapper-1j_1ub::after {
+  background-color: #ffffff;
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  filter: blur(10px);
+  opacity: 0.4;
+}
+
+.closedFolderIconWrapper-3tRb2d {
+    display: none;
+}
+.folderIconWrapper-1oRIZr:not([style=""])::before {
+    position: absolute;
+    content: "";
+    width: 18px;
+    height: 18px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: inherit;
+    -webkit-mask: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/solid/folder.svg) no-repeat;
+    mask: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/icons/solid/folder.svg) no-repeat;
+    transform: scale(1.3335);
+    filter: brightness(1.5) saturate(1.5);
+}
+
+[class*=accountProfilePopoutWrapper-] > div > div > [class*=userPopoutOverlayBackground-] > [class*=scroller-]
+{
+  display: none;
+}
+
+.recentsIcon-F3eO1o,
+.anchor-1X4H4q[href="https://support.discord.com"],
+.iconWrapper-2awDjA[aria-label="Notification Settings"] {
+    display: none;
+}
+
+[class*=accountProfilePopoutWrapper-] > div > div > [class*=userPopoutOverlayBackground-] > div:nth-child(1),
+[class*=accountProfilePopoutWrapper-] > div > div > [class*=userPopoutOverlayBackground-] > div:nth-child(2),
+[class*=accountProfilePopoutWrapper-] > div > div > [class*=userPopoutOverlayBackground-] > div:nth-child(3),
+[class*=accountProfilePopoutWrapper-] div[role=separator] {
+  display: none;
+}
+Bread

@@ -1,0 +1,149 @@
+:is(main,section)[class^=chatContent] .form-3gdLxP {
+	padding: 20px 0;
+	right: 16px;
+}
+:is(main,section)[class^=chatContent] .scrollableContainer-15eg7h {
+	max-width: 100%;
+	padding-top: 4px;
+	margin: -16px 0 16px;
+	background: transparent;
+	border-radius: 8px;
+}
+.channelTextArea-1FufC0 .divider-2rZFJK {
+	border-top: none;
+}
+.channelAttachmentArea-HwpkuQ {
+	background: var(--background-modifier-accent);
+	border-radius: 8px;
+}
+.autocomplete-3jLKbj {
+	margin: 0 1em;
+	border-radius: 8px;
+}
+.attachButton-1ijpt9 {
+	margin-left: 0;
+	padding: 0.5em 0.5em;
+}
+.attachWrapper-3slhXI {
+	position: relative;
+	background: var(--background-modifier-accent);
+	border-radius: 8px;
+	max-height: 30px;
+	max-width: 36px;
+	top: 80px;
+	left: calc(100% - 36px);
+	z-index: 10;
+	margin-left: 1px;
+}
+.attachButton-_ACFSu {
+	position: relative;
+	height: 30px;
+	right: 1px;
+}	
+.slateTextArea-27tjG0 {
+	padding-left: 10px;
+}
+.sansAttachButton-1ERHue {
+	padding-left: 0;
+}
+.textArea-2CLwUE {
+	background: var(--background-modifier-accent);
+	border-radius: 8px;
+	margin: 0 4px 0 8px;
+	min-height: 109px;
+}
+.buttons-uaqb-5 {
+	background: transparent;
+	border-radius: 8px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 8px 0;
+	height: fit-content
+}
+.buttons-uaqb-5>:is(button,div) {
+	background: var(--background-modifier-accent);
+	margin: 0 4px;
+	border-radius: 8px;
+}
+.buttons-uaqb-5 button[style="padding: 0px 2px; height: 100%;"] img[src="https://discord.com/assets/4c5a77a89716352686f590a6f014770c.svg"] {
+	content: url("https://cdn.discordapp.com/emojis/1024751291504791654.gif?size=48&name=shiggy%7E1&quality=lossless");
+	padding: 0 4px
+}
+.separator-3ng7S5::before {
+	display: none;
+}
+.separator-3ng7S5 button {
+	margin-left: -6px;
+}
+.contents-2MsGLg .scrollableContainer-15eg7h {
+	margin: 12px 0 !important
+}
+:is(main,section)[class^=chatContent] .scroller-18M1mG {
+	background: var(--background-tertiary)
+}
+.contentTitle-3CylD3 {
+	padding: 0.25em 0.5em;
+	text-transform: none;
+	font-size: 14px
+}
+.channelTextArea-1VQBuV>[class*=channelTextAreaInner-][class*=scrollableContainer-]{
+	background: var(--background-primary-alt);
+	border-radius: 8px;
+	margin-bottom: 1em
+}
+.button-2fCJ0o:hover {
+	color: var(--interactive-hover) !important
+}
+:is(.textArea-2CLwUE, .attachWrapper-3slhXI, .buttons-uaqb-5>:is(button,div), .inner-1NoIT5, .searchBar-jGtisZ):is(:hover,:focus-within) {
+	background: rgba(44, 151, 250, 0.596)
+}
+:is(main,section)[class^=chatContent] .typing-2J1mQU {
+	padding-left: 16px;
+	padding-bottom: 4px;
+	font-weight: 1000
+}
+main[class^=chatContent] [class^=attachedBars] {
+	min-height: unset !important;
+	position: relative;
+	padding-bottom: 4px;
+	margin: 0 0 20px 0 !important;
+	border-radius: 8px;
+	z-index: 0
+}
+.replyBar-1oi75v {
+	background-color: transparent
+}
+[class^=jumpToPresentBar] {
+	margin: 0 26px -16px 0;
+	right: unset;
+	background-color: unset
+}
+.barButtonBase-Sk2mdB {
+	color: var(--info-positive-foreground);
+	background-color: var(--background-tertiary);
+	border-radius: calc(8px/1.5);
+	padding-right: 8px;
+	margin: 0px 8px 16px 0
+}
+.barButtonBase-Sk2mdB:hover {
+	background-color: var(--background-floating)
+}
+.newMessagesBar-1hF-9G {
+	background: transparent;
+	margin: 0 5em 0 0.75em;
+	top: 96.67%;
+	box-shadow: none;
+}
+.barButtonAlt-TQoCdZ {
+	margin-right: 45%;
+}
+:root :is(main,section)[class^=chatContent] .typing-2J1mQU {
+	right: unset;
+	left: 0px
+}
+:root [class^=jumpToPresentBar] {
+	left: unset;
+	right: 0;
+	border-top-right-radius: unset;
+	border-top-left-radius: unset
+}

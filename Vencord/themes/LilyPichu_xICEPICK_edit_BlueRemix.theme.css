@@ -1,0 +1,131 @@
+/**
+* @name LilyPichu xICEPICK edit Blue Remix
+* @author Nyria, edited by xICEPICK#9110 and 1.5 kase CacÄ±k#5876 and now Project SnowDrift#8982
+* @description Edited version of the Lily Pichu theme.
+* @invite rtBQX5D3bD
+* @version 1.0
+*/
+@import url("https://xicepick.github.io/Discord-Themes/Lily_Pichu_Edit.css");
+
+:root {
+
+/* --- User variables --- */
+
+/* Background (if you want an image replace it by : 
+
+--background-tertiary-alt: url("image"); */
+--background-tertiary-alt: url("https://i.imgur.com/bHzlS0K.png");
+
+/* Border-radius for the whole theme */
+--border-radius: 20px;
+
+/* Background color of activity cards*/
+--playing: #8ea6fc;
+--spotify: #5fce86;
+--streaming: #9b77da;
+--xbox: #53a853;
+
+}
+
+.theme-dark {
+
+    /* Text */
+    --text-normal: #abceff;
+    --header-primary: #5994e7;
+    --interactive-normal: #abceff;
+    --channels-default: #abceff;
+
+    --text-muted: #8eaeda;
+    --interactive-muted: #7a97bf;
+
+    --header-secondary: #abceff;
+    --interactive-hover: #d6e7ff;
+    --interactive-active: #abceff;
+
+    /* Background color */
+    --background-primary: #2e425e;
+    --background-secondary: #1e2e45;
+    --background-secondary-alt: #131f30;
+    --background-tertiary: #142030;
+     --background-floating: #0f1926;
+    --background-accent: #abceff;
+    --channeltextarea-background: var(--background-secondary);
+    --background-modifier-hover: rgba(31, 42, 56, 0.32);
+    --background-modifier-active: rgba(12, 14, 19, 0.32);
+    --background-modifier-selected: rgba(21, 23, 31, 0.32);
+    --toast-background: #abceff !important;
+    --toast-header: #abceff !important;
+    --toast-contents: #abceff !important;
+    --toast-border: #abceff !important;
+
+    /* Scrollbar */
+    --scrollbar-auto-thumb: var(--background-tertiary);
+    --scrollbar-auto-track: var(--background-secondary-alt);
+    --scrollbar-thin-thumb: var(--background-tertiary);
+    --scrollbar-thin-track: transparent;
+
+    /* Other */
+    --deprecated-quickswitcher-input-background: var(--background-primary);
+}
+    .colorBrand-ROmMP1 { color: #abceff;}
+    .colorDefault-2K3EoJ.focused-3afm-j, .colorDefault-2K3EoJ:active:not(.hideInteraction-1iHO1O) { background-color: var(--background-modifier-hover) !important;}
+
+ 
+    /* Buttons */
+    .lookFilled-1Gx00P { background-color: #abceff !important;}
+    .lookFilled-#abceff:active, .lookFilled-1Gx00P:hover { background-color: #abceff !important;}
+    .lookOutlined-3sRXeN:not(.colorWhite-rEQuAQ) { color:#abceff; border-color: #abceff;}
+
+    /* Hover background */
+    .colorDefault-2K3EoJ.focused-3afm-j, .colorDefault-2K3EoJ:active:not(.hideInteraction-1iHO1O) { color: var(--interactive-normal);}
+.theme-light {
+
+  /* Text */
+    --text-normal: #abceff;
+    --header-primary: #abceff;
+    --interactive-normal: #abceff;
+    --channels-default: #abceff;
+
+    --text-muted: #7a97bf;
+    --interactive-muted: #7a97bf;
+
+    --header-secondary: #abceff;
+    --interactive-hover: #d6e7ff;
+    --interactive-active: #abceff;
+
+    /* Background color */
+    --background-primary: #2e425e;
+    --background-secondary: #1e2e45;
+    --background-secondary-alt: #131f30;
+    --background-tertiary: #142030;
+     --background-floating: #0f1926;
+    --background-accent: #abceff;
+    --channeltextarea-background: var(--background-secondary);
+    --background-modifier-hover: rgba(31, 42, 56, 0.32);
+    --background-modifier-active: rgba(12, 14, 19, 0.32);
+    --background-modifier-selected: rgba(21, 23, 31, 0.32);
+    --toast-background: #abceff !important;
+    --toast-header: #abceff !important;
+    --toast-contents: #abceff !important;
+    --toast-border: #abceff !important;
+
+    /* Scrollbar */
+    --scrollbar-auto-thumb: var(--background-tertiary);
+    --scrollbar-auto-track: var(--background-secondary-alt);
+    --scrollbar-thin-thumb: var(--background-tertiary);
+    --scrollbar-thin-track: transparent;
+
+    /* Other */
+    --deprecated-quickswitcher-input-background: var(--background-primary);
+}
+    .colorBrand-ROmMP1 { color: #abceff;}
+    .colorDefault-2K3EoJ.focused-3afm-j, .colorDefault-2K3EoJ:active:not(.hideInteraction-1iHO1O) { background-color: var(--background-modifier-hover) !important;}
+
+ 
+    /* Buttons */
+    .lookFilled-1Gx00P { background-color: #abceff !important;}
+    .lookFilled-#abceff:active, .lookFilled-1Gx00P:hover { background-color: #abceff !important;}
+    .lookOutlined-3sRXeN:not(.colorWhite-rEQuAQ) { color:#abceff; border-color: #abceff;}
+
+    /* Hover background */
+    .colorDefault-2K3EoJ.focused-3afm-j, .colorDefault-2K3EoJ:active:not(.hideInteraction-1iHO1O) { color: var(--interactive-normal);}
